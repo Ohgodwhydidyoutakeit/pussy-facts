@@ -22,3 +22,7 @@ Endpoint nie zwraca niestety konkretnych id wpisów, więc trzeba będzie brzydk
 - Routing na guardach wraz z lazyloading - canActivate i loadChildren
 - Chcemy zrobić infinite scrolling. Dla user expirience chciałbym by było seamless. Chciałbym skorzystać z bufora dla kolejnych requestów. Zmartwieniem jest dla mnie to, że przychodzące api może być pokryte w 100% z tym co już mamy w aplikacji. Przykład: mamy wyświetlone 10 faktów, a z Api przychodzi nam np 5 które są już wyświetlone. W takim wypadku chciałbym by było to sprawdzane przy wrzuceniu do buffora i ponowienie requestu. Innym rozwiązaniem byłby backend for front-end, który by to rozwiązywał. Jest to moim zdaniem overengineering
 - Użycie odpowiedniej struktury danych - wystarczy nam mapa key:value by uni
+
+
+## Notatki developera
+- sprawdzenie jak angular sobie radzi bez zone.js. Zoneless [artykuł](https://angular.dev/guide/experimental/zoneless)

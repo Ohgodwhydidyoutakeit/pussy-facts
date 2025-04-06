@@ -4,17 +4,14 @@ import { appRoutes } from './app.routes';
 import { provideStore } from '@ngrx/store';
 import { provideStoreDevtools } from '@ngrx/store-devtools';
 import { provideHttpClient } from '@angular/common/http';
-import { TranslocoHttpLoader } from './transloco-loader';
+import { TranslocoHttpLoader } from '@pussy-facts/transloco';
 import { provideTransloco } from '@jsverse/transloco';
+import { AuthStoreProviders } from '@pussy-facts/auth'
 export const appConfig: ApplicationConfig = {
   providers: [
     provideExperimentalZonelessChangeDetection(), // this is experimental api 
     provideRouter(appRoutes),
-    provideStore(),
-    provideStoreDevtools({
-      maxAge: 25,
-      logOnly: !isDevMode(),
-    }),
+    // transloco stuff
     provideHttpClient(),
     provideTransloco({
       config: {
@@ -24,5 +21,12 @@ export const appConfig: ApplicationConfig = {
       },
       loader: TranslocoHttpLoader
     }),
+    // store stuff
+    provideStore(),
+    provideStoreDevtools({
+      maxAge: 25,
+      logOnly: !isDevMode(),
+    }),
+    AuthStoreProviders
   ],
 };

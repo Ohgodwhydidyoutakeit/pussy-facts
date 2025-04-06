@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { NavbarComponent } from './navbar.component';
+import { getTranslocoModule } from '@pussy-facts/transloco'
 
 describe('ComponentsComponent', () => {
   let component: NavbarComponent;
@@ -7,7 +8,9 @@ describe('ComponentsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [NavbarComponent],
+      imports: [NavbarComponent, getTranslocoModule()],
+      providers: [
+      ]
     }).compileComponents();
 
     fixture = TestBed.createComponent(NavbarComponent);

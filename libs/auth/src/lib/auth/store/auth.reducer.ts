@@ -1,23 +1,25 @@
 import { createReducer, on } from "@ngrx/store";
 import { AuthActions } from './auth.actions';
+import { AuthState } from "../domain/auth-state";
 
 
-export interface AuthState {
-    isLoggedIn: boolean
-}
+
 
 const initialState: AuthState = {
-    isLoggedIn: false
+    isLoggedIn: false,
+    userName: ''
 }
 
 export const AuthReducer = createReducer(
     initialState,
-    on(AuthActions.login, (state) => ({
+    on(AuthActions.loginSuccess, (state, { payload }) => ({
         ...state,
         isLoggedIn: true,
+        userName: payload.login
     })),
     on(AuthActions.logout, (state) => ({
         ...state,
         isLoggedIn: false,
+        userName: ''
     }))
 );

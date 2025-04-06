@@ -1,0 +1,18 @@
+.redirect-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+
+  &__paragragh {
+    color: grey;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  &__cta {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+}

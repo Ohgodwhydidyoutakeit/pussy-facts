@@ -1,0 +1,11 @@
+<div *transloco="let t" class="redirect-page">
+
+    <p class="redirect-page__paragragh">{{t('redirect-page')}}</p>
+    <!-- wont be playing with ngOptimizedImage -->
+    <img [src]="imagePath" alt="404 not found" />
+
+    <div class="redirect-page__cta">
+        <a routerLink="/" mat-stroked-button>{{t('redirect-page-home')}}</a>
+        <a routerLink="/facts" mat-flat-button>{{t('redirect-page-facts')}}</a>
+    </div>
+</div>

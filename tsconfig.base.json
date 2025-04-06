@@ -18,6 +18,10 @@
     "paths": {
       "@pussy-facts/auth": ["libs/auth/src/index.ts"],
       "@pussy-facts/components": ["libs/components/src/index.ts"],
+      "@pussy-facts/feature-login": [
+        "libs/features/feature-login/src/index.ts"
+      ],
+      "@pussy-facts/mocks": ["libs/mocks/src/index.ts"],
       "@pussy-facts/pages": ["libs/pages/src/index.ts"],
       "@pussy-facts/shared": ["libs/shared/src/index.ts"],
       "@pussy-facts/transloco": ["libs/transloco/src/index.ts"]

@@ -1,5 +1,13 @@
 <ng-container *transloco="let t">
-    <mat-toolbar>
+    <mat-toolbar class="navbar">
         <h1>{{t('navbar.title')}}</h1>
+
+
+        <div class="navbar__cta">
+            @if(isLoggedIn()){
+            <a routerLink="/facts" mat-stroked-button>{{t('navbar.watch-facts')}}</a>
+            <button mat-stroked-button (click)="logout()">{{t('navbar.logout')}}</button>
+            }
+        </div>
     </mat-toolbar>
 </ng-container>

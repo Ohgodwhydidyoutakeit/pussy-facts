@@ -1,3 +1,12 @@
 {
-    "navbar.title": "Pussy Cats"
+  "navbar.title": "Pussy Facts",
+  "navbar.user": "Hello, {{username}}",
+  "navbar.watch-facts": "watch facts",
+  "navbar.logout": "logout",
+  "login-form.login-label": "Login",
+  "login-form.password-label": "Password",
+  "login-form.form-submit": "Login",
+  "redirect-page": "Whoops, something went wrong",
+  "redirect-page-home": "Take me home",
+  "redirect-page-facts": "Show me the facts"
 }

@@ -1,6 +1,6 @@
 import { createFeatureSelector, createSelector } from "@ngrx/store";
-import { AuthState } from "./auth.reducer";
 import { AuthKey } from "../keys/auth-key";
+import { AuthState } from "../domain/auth-state";
 
 
 
@@ -14,6 +14,14 @@ const selectIsLoggedIn = createSelector(
 )
 
 
+const selectUsername = createSelector(
+    selectAuthState,
+    (state) => state.userName
+)
+
+
+
 export const AuthQuery = {
-    selectIsLoggedIn
+    selectIsLoggedIn,
+    selectUsername
 }

@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-
+import { NavbarComponent } from "@pussy-facts/components"
 @Component({
-  imports: [RouterModule],
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
+  imports: [RouterModule, NavbarComponent],
 })
 export class AppComponent {
-  title = 'pussy-facts';
 }

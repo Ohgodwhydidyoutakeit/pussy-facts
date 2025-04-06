@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "start": "nx serve pussy-facts",
-    "test": "nx test pussy-facts"
+    "test": "nx run-many --target=test --all"
   },
   "private": true,
   "dependencies": {

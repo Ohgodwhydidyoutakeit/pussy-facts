@@ -1,6 +1,5 @@
 
-import { createAction, props } from '@ngrx/store'
-import { ActionPayload } from "@pussy-facts/shared"
+import { createAction } from '@ngrx/store'
 
 const AuthActionsKey = '[Auth]'
 

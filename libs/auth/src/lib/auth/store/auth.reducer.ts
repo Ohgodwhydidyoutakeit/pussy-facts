@@ -1,28 +1,23 @@
-import { createFeature, createReducer, on } from "@ngrx/store";
-import { AuthActions } from "libs/auth/src/lib/auth/store/auth.actions";
+import { createReducer, on } from "@ngrx/store";
+import { AuthActions } from './auth.actions';
 
 
-export interface Auth {
+export interface AuthState {
     isLoggedIn: boolean
 }
 
-
-const initialState: Auth = {
+const initialState: AuthState = {
     isLoggedIn: false
 }
 
-
-export const AuthFeature = createFeature({
-    name: 'Auth',
-    reducer: createReducer(
-        initialState,
-        on(AuthActions.login, (state) => ({
-            ...state,
-            isLoggedIn: true,
-        })),
-        on(AuthActions.logout, (state) => ({
-            ...state,
-            isLoggedIn: false,
-        }))
-    ),
-});
+export const AuthReducer = createReducer(
+    initialState,
+    on(AuthActions.login, (state) => ({
+        ...state,
+        isLoggedIn: true,
+    })),
+    on(AuthActions.logout, (state) => ({
+        ...state,
+        isLoggedIn: false,
+    }))
+);

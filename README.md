@@ -32,3 +32,8 @@ nal providers
 - https://github.com/wh-iterabb-it/meowfacts/blob/main/docs/api.yaml
 openapi generator jest możliwością
 - przy req o 123 fakty zwraca 91 linii
+
+## Odpalanie
+yarn / npm install
+yarn start
+

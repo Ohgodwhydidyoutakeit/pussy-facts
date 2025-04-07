@@ -1,5 +1,13 @@
-<cdk-virtual-scroll-viewport appendOnly itemSize="50" class="facts-container">
-    @for (item of facts(); track $index) {
-    <feature-component [text]="item" />
+<div cdkScrollable class="facts-container">
+@for (fact of facts(); track $index) {
+    <feature-component [text]="fact" />
     }
-</cdk-virtual-scroll-viewport>
+
+@if(isLoading()){
+    @for (item of [1,2,3,4]; track $index) {
+         <feature-component text="Loading..." />
+    }
+    }
+</div>
+
+<!-- Linter broke sry -->

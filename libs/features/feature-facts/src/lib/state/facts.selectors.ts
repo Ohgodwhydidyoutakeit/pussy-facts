@@ -15,6 +15,11 @@ const selectFacts = createSelector(
     (state) => state.facts
 )
 
+const selectIsLoading = createSelector(
+    selectFactsState,
+    (state) => state.isLoading
+)
 export const FactsQuery = {
     selectFacts,
+    selectIsLoading
 }

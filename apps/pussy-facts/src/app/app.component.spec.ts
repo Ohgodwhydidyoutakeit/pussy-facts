@@ -3,11 +3,13 @@ import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 
 import { getTranslocoModule } from '@pussy-facts/transloco'
+import { MockComponent } from 'ng-mocks';
+import { NavbarComponent } from '@pussy-facts/components';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AppComponent, RouterModule.forRoot([]), getTranslocoModule()],
+      imports: [AppComponent, RouterModule.forRoot([]), getTranslocoModule(), MockComponent(NavbarComponent)],
     }).compileComponents();
   });
 

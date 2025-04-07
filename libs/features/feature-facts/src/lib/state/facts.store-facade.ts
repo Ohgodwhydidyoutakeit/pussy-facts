@@ -16,9 +16,14 @@ export class FactsFacade {
 
 
     getFacts$ = this.#store.select(FactsQuery.selectFacts)
+    getIsLoading$ = this.#store.select(FactsQuery.selectIsLoading)
 
-    
     requestFacts(payload: FactsRequestPayload) {
         this.#store.dispatch(FactsActions.requestFacts({ payload }))
+    }
+
+
+    requestMoreFacts(payload: FactsRequestPayload) {
+        this.#store.dispatch(FactsActions.requestMoreFacts({ payload }))
     }
 }

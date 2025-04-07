@@ -1,13 +1,10 @@
 import { inject, Injectable } from "@angular/core";
-import { TranslocoService } from "@jsverse/transloco";
 import { Observable } from "rxjs";
 
-import { HttpClient } from "@angular/common/http"
-import { FactsRequestPayload } from "../domain/interfaces/facts-request.payload";
+import { HttpClient } from "@angular/common/http";
 import { URL } from "../domain/consts/facts.consts";
+import { FactsRequestPayload } from "../domain/interfaces/facts-request.payload";
 import { FactsResponsePayload } from "../domain/interfaces/facts-response.payload";
-
-
 
 
 @Injectable({

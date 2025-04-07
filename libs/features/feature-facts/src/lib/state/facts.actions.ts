@@ -12,12 +12,24 @@ export class FactsActions {
         props<ActionPayload<FactsRequestPayload>>()
     )
 
+    static requestMoreFacts = createAction(
+        `${FACTS_STORE_KEY} Get More Facts`,
+        props<ActionPayload<FactsRequestPayload>>()
+    )
+
 
     static getFactsSuccess = createAction(
         `${FACTS_STORE_KEY} Get Facts Success`,
         props<ActionPayload<FactsResponsePayload>>()
     )
 
+
+    static getMoreFactsSuccess = createAction(
+        `${FACTS_STORE_KEY} Get More Facts Success`,
+        props<ActionPayload<FactsResponsePayload>>()
+    )
+
+    // we will use that one for all requests 
 
     static getFactsFailed = createAction(
         `${FACTS_STORE_KEY} Get Facts Failed`,

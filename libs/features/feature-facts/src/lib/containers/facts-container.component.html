@@ -1,0 +1,5 @@
+<cdk-virtual-scroll-viewport appendOnly itemSize="50" class="facts-container">
+    @for (item of facts(); track $index) {
+    <feature-component [text]="item" />
+    }
+</cdk-virtual-scroll-viewport>

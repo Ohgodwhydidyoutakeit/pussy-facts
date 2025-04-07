@@ -18,6 +18,9 @@
     "paths": {
       "@pussy-facts/auth": ["libs/auth/src/index.ts"],
       "@pussy-facts/components": ["libs/components/src/index.ts"],
+      "@pussy-facts/feature-facts": [
+        "libs/features/feature-facts/src/index.ts"
+      ],
       "@pussy-facts/feature-login": [
         "libs/features/feature-login/src/index.ts"
       ],

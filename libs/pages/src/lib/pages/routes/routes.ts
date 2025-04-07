@@ -8,15 +8,18 @@ import { LoginGuard } from "./guards/login-guard";
 export const PageRoutes: Route[] = [
     {
         path: "",
-        component: HomePageComponent
+        loadComponent: () => { return import('../home-page/home-page.component').then((component) => component.HomePageComponent) }
     },
     {
         path: 'facts',
-        component: FactsPageComponent,
+        loadComponent: () => { return import('../facts-page/facts-page.component').then((component) => component.FactsPageComponent) },
         canActivate: [LoginGuard]
     },
     {
         path: '**',
-        component: RedirectPageComponent
+        loadComponent: () =>
+            import('../redirect-page/redirect-page.component').then(
+                (c) => c.RedirectPageComponent
+            )
     }
 ]

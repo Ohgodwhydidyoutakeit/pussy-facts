@@ -8,5 +8,6 @@
   "login-form.form-submit": "Login",
   "redirect-page": "Whoops, something went wrong",
   "redirect-page-home": "Take me home",
-  "redirect-page-facts": "Show me the facts"
+  "redirect-page-facts": "Show me the facts",
+  "facts-page-title": "Here are some facts you may not have known"
 }

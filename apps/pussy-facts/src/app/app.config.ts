@@ -7,6 +7,8 @@ import { provideHttpClient } from '@angular/common/http';
 import { TranslocoHttpLoader } from '@pussy-facts/transloco';
 import { provideTransloco } from '@jsverse/transloco';
 import { AuthStoreProviders } from '@pussy-facts/auth'
+import { FactsStoreProviders } from '@pussy-facts/feature-facts';
+
 export const appConfig: ApplicationConfig = {
   providers: [
     provideExperimentalZonelessChangeDetection(), // this is experimental api 
@@ -27,6 +29,7 @@ export const appConfig: ApplicationConfig = {
       maxAge: 25,
       logOnly: !isDevMode(),
     }),
-    AuthStoreProviders
+    AuthStoreProviders,
+    FactsStoreProviders
   ],
 };

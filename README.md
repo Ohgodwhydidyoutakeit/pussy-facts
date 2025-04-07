@@ -27,3 +27,8 @@ Endpoint nie zwraca niestety konkretnych id wpisów, więc trzeba będzie brzydk
 - ng19 standalone default
 - skłaniam się w kwesti providowania mocków do "root", nie chce mi się Tworzyc osobnych providerów dla różnych flag
 - meta reducer jako localstorage mock
+
+-https://meowfacts.herokuapp.com/ 
+- https://github.com/wh-iterabb-it/meowfacts/blob/main/docs/api.yaml
+openapi generator jest możliwością
+- przy req o 123 fakty zwraca 91 linii
